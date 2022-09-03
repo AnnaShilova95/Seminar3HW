@@ -1,6 +1,6 @@
 ﻿/*Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом
 //Пользовательский ввод числа,создаем массив
-
+int[] createArray(){
 int[] myNum = new int[5];
 for (int i = 0; i < myNum.Length; i++)
     {
@@ -11,13 +11,17 @@ for (int i = 0; i < myNum.Length; i++)
     {
     Console.Write(myNum[i] + "");
     }
+    return myNum;
+}
 Console.WriteLine("");
 //Сравниваем числа 
-if (myNum[0] == myNum[4] && myNum[1] == myNum[3]){
-    Console.WriteLine("ОГО! Ваше число настоящий палиндромом!");
+
+int [] itogArr = createArray();
+if (itogArr[0] == itogArr[4] && itogArr[1] == itogArr[3]){
+    Console.WriteLine(" ОГО! Ваше число настоящий палиндромом!");
 }
 else{
-    Console.WriteLine("Увы");
+    Console.WriteLine(" Увы");
 }
 
 
